@@ -14,10 +14,18 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #e3ecf5, #f9fbfd);
-    height: 100vh;
+    background-image: url("../Images/FondoLogin.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
