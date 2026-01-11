@@ -82,8 +82,7 @@ body {
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
 }
 
-
-.Contenedor-Login button {
+.btn-login {
     width: 100%;
     padding: 0.95rem;
     border-radius: 8px;
@@ -93,16 +92,18 @@ body {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    text-align: center;
+    display: block;
+    text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-login {
-  display: block;
-  text-align: center;
-  background: #3b5cff;
-  color: white;
-  padding: 0.7rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.35);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 1px rgba(52, 152, 219, 0.3);
 }

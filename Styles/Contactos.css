@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.cuerpo-contactos {
+    background: url("../Images/FondoContactos.jpg") center / cover no-repeat;
+}
+
+.encabezado {
+    width: 100%;
+    height: 64px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.encabezado a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.encabezado a:hover {
+    background: #272626;
+}
+
+.panel-contactos {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 28px 32px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.25);
+}
+
+.panel-contactos h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: 0.04em;
+}
+
+.estilo-fondo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+}
+
+.contacto {
+    background: linear-gradient(160deg, #ffffff, #eaf1fb);
+    color: #0f172a;
+    border-radius: 20px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contacto:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,1),
+        0 20px 40px rgba(15, 23, 42, 0.28);
+}
+
+.contacto h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b1b4f;
+}
+
+.contacto p {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.4;
+}
+
+.contacto a {
+    align-self: flex-end;
+    margin-top: auto;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contacto a:hover {
+    background: #3b82f6;
+    transform: translateY(-1px);
+}
