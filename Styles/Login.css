@@ -96,17 +96,13 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.Contenedor-Login button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.35);
-}
-
-.Contenedor-Login button:active {
-    transform: translateY(0);
-    box-shadow: 0 1px 1px rgba(52, 152, 219, 0.3);
-}
-
-.Contenedor-Login a {
-    text-decoration: none;
-    display: block;
+.btn-login {
+  display: block;
+  text-align: center;
+  background: #3b5cff;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
 }
