@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url("../Images/FondoContactos.jpg") center / cover no-repeat;
+}
+
+.encabezado {
+    width: 100%;
+    height: 64px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+.encabezado a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.2s ease;
+}
+
+.encabezado a:hover {
+    background: #272626;
+}
+
+.link-perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto; 
+    text-decoration: none;
+    color: white;
+}
+
+.link-perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.panel-pendientes {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 28px 32px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.25);
+}
+
+.panel-pendientes h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0f172a;
+    letter-spacing: 0.04em;
+}
+
+.agregar-pendiente {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.agregar-pendiente input,
+.agregar-pendiente select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    flex: 1 1 200px;
+}
+
+.agregar-pendiente button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.agregar-pendiente button:hover {
+    background-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+.estilo-fondo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+}
+
+/* TARJETAS DE TAREA */
+.tarea {
+    border-left: 6px solid #2563eb;
+    background: #ffffff;
+    padding: 1.8rem;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarea:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Colores según categoría */
+.tarea.Importante {
+    border-color: #ef4444;
+}
+
+.tarea.Intermedia {
+    border-color: #fc9f00; 
+}
+
+.tarea.Noimportante{
+    border-color: #00fc2a;
+}
+
+.tarea h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #0b1b4f;
+}
+
+.tarea p {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.5;
+}
+
+.tarea .acciones {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.tarea button.editar {
+    background-color: #f59e0b;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.tarea button.editar:hover {
+    background-color: #fbbf24;
+}
+
+.tarea button.eliminar {
+    background-color: #ef4444;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.tarea button.eliminar:hover {
+    background-color: #f87171;
+}

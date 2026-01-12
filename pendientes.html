@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendientes</title>
+    <link rel="stylesheet" href="Styles/Pendientes.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="contactos.html">Contactos</a>
+        <a href="agregar.html">Agregar contacto</a>
+        <a href="favoritos.html">Favoritos</a>
+
+        <a href="perfil.html" class="link-perfil">
+            <img src="Images/FotoPerfil.jpg" alt="Foto de Perfil">
+            <span>Perfil</span>
+        </a>
+    </header>
+
+    <main class="panel-pendientes">
+        <h1>Lista de pendientes:</h1>
+
+        <section class="agregar-pendiente">
+            <input type="text" id="txtNombre" placeholder="Nombre de la tarea">
+            <input type="text" id="txtDescripcion" placeholder="Descripción de la tarea">
+            
+            <select id="categorias">
+                <option value="Importante">Importante</option>
+                <option value="Intermedia">Intermedia</option>
+                <option value="Noimportante">No importante</option>
+            </select>
+
+            <button id="btnAgregar">Agregar</button>
+        </section>
+
+        <section class="estilo-fondo" id="lista-pendientes">
+
+        </section>
+    </main>
+
+
+    <script src="Scripts/pendientes.js"></script>
+</body>
+</html>
