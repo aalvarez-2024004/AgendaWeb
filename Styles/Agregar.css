@@ -5,35 +5,44 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
-.cuerpo-agregar {
+body {
     min-height: 100vh;
-    background: url("../Images/FondoContactos.jpg") center / cover no-repeat;
 }
 
+.cuerpo-agregar {
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+    ),
+    url("../Images/FondoContactos.jpg") center / cover no-repeat fixed;
+}
 
 .encabezado {
     width: 100%;
     height: 64px;
-    background: #000;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     gap: 20px;
-    padding: 0 32px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    padding: 0 28px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
 .encabezado a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f8fafc;
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 14px;
-    transition: background 0.2s ease;
+    font-weight: 500;
+    transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .encabezado a:hover {
-    background: #272626;
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
 }
 
 .link-perfil {
@@ -41,8 +50,11 @@
     align-items: center;
     gap: 8px;
     margin-left: auto;
-    text-decoration: none;
-    color: black;
+}
+
+.link-perfil span {
+    color: #f8fafc;
+    font-size: 14px;
 }
 
 .link-perfil img {
@@ -50,29 +62,30 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.6);
 }
 
 .Contenedor-agregar {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 32px 36px;
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 20px;
-    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.25);
+    max-width: 620px;
+    margin: 64px auto;
+    padding: 36px 40px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.28);
 }
 
 .Contenedor-agregar h1 {
-    margin-bottom: 24px;
-    font-size: 22px;
+    margin-bottom: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #0f172a;
     text-align: center;
+    letter-spacing: 0.03em;
 }
-
 
 .Contenedor-agregar form {
     display: grid;
-    gap: 18px;
+    gap: 20px;
 }
 
 .Contenedor-agregar form div {
@@ -89,33 +102,41 @@
 
 .Contenedor-agregar input {
     padding: 12px 14px;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid #d1d5db;
     font-size: 14px;
+    background: #f8fafc;
     outline: none;
-    transition: border 0.2s ease, box-shadow 0.2s ease;
+    transition: 
+        border 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.Contenedor-agregar input::placeholder {
+    color: #94a3b8;
 }
 
 .Contenedor-agregar input:focus {
+    background: #ffffff;
     border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
 }
 
-
 .Contenedor-agregar a {
-    margin-top: 12px;
+    margin-top: 16px;
     text-align: center;
     text-decoration: none;
-    padding: 12px 18px;
+    padding: 13px 22px;
     border-radius: 999px;
-    background: #2563eb;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
     color: #ffffff;
     font-weight: 600;
     font-size: 14px;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .Contenedor-agregar a:hover {
-    background: #3b82f6;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
 }
