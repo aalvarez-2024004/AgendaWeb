@@ -36,6 +36,21 @@
     background: #272626;
 }
 
+.link-perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.link-perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 .Contenedor-agregar {
     max-width: 600px;
