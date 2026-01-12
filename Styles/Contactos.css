@@ -34,6 +34,22 @@
     background: #272626;
 }
 
+.link-perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto; /* 👈 esto lo manda a la derecha */
+    text-decoration: none;
+    color: black;
+}
+
+.link-perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .panel-contactos {
     max-width: 1200px;
     margin: 32px auto;
