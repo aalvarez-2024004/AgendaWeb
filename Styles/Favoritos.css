@@ -22,6 +22,22 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
+.link-perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    text-decoration: none;
+    color: black;
+}
+
+.link-perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .nombre {
     display: flex;
     align-items: center;
