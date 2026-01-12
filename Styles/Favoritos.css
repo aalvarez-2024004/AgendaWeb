@@ -22,6 +22,17 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.35);
 }
 
+.nombre {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.estrella {
+    color: gold;
+    font-size: 22px;
+}
+
 .encabezado a {
     text-decoration: none;
     color: #ffffff;
