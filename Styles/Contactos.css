@@ -5,42 +5,56 @@
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+body {
+    min-height: 100vh;
+}
+
 .cuerpo-contactos {
-    background: url("../Images/FondoContactos.jpg") center / cover no-repeat;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+    ),
+    url("../Images/FondoContactos.jpg") center / cover no-repeat fixed;
 }
 
 .encabezado {
     width: 100%;
     height: 64px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 25px;
-    padding: 0 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    gap: 24px;
+    padding: 0 24px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
 }
 
 .encabezado a {
     text-decoration: none;
-    color: #ffffff;
+    color: #f8fafc;
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 14px;
-    transition: background 0.2s ease;
+    font-weight: 500;
+    transition: background 0.25s ease, transform 0.2s ease;
 }
 
 .encabezado a:hover {
-    background: #272626;
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
 }
+
 
 .link-perfil {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: auto; 
-    text-decoration: none;
-    color: black;
+    margin-left: auto;
+}
+
+.link-perfil span {
+    color: #f8fafc;
+    font-size: 14px;
 }
 
 .link-perfil img {
@@ -48,20 +62,21 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.6);
 }
 
 .panel-contactos {
     max-width: 1200px;
-    margin: 32px auto;
-    padding: 28px 32px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 18px;
-    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.25);
+    margin: 36px auto;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.28);
 }
 
 .panel-contactos h1 {
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 24px;
+    font-size: 26px;
     font-weight: 600;
     color: #0f172a;
     letter-spacing: 0.04em;
@@ -69,34 +84,36 @@
 
 .estilo-fondo {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
 }
 
 .contacto {
-    background: #e4dfdf;
+    background: linear-gradient(
+        145deg,
+        #f1f1f1,
+        #dddddd
+    );
     color: #0f172a;
-    border-radius: 20px;
+    border-radius: 22px;
     padding: 1.8rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 170px;
+    min-height: 180px;
     position: relative;
-    overflow: hidden;
     border: 1px solid rgba(15, 23, 42, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contacto:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,1),
-        0 20px 40px rgba(15, 23, 42, 0.28);
+        0 20px 40px rgba(15, 23, 42, 0.35);
 }
 
+/* TEXTO */
 .contacto h3 {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 6px;
     color: #0b1b4f;
@@ -105,7 +122,6 @@
 .contacto p {
     font-size: 14px;
     color: #334155;
-    line-height: 1.4;
 }
 
 .contacto a {
@@ -113,15 +129,15 @@
     margin-top: auto;
     text-decoration: none;
     font-size: 13px;
-    padding: 8px 16px;
+    padding: 9px 18px;
     border-radius: 999px;
-    background: #2563eb;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
     color: #ffffff;
     font-weight: 600;
-    transition: background 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .contacto a:hover {
-    background: #3b82f6;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.45);
 }
