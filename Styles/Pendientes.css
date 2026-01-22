@@ -194,3 +194,28 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
+
+.tarea {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: #f2f2f2;
+}
+
+/* IMPORTANTE */
+.tarea.Importante {
+    border-left: 8px solid #e74c3c;
+    background: #fdecea;
+}
+
+/* INTERMEDIA */
+.tarea.Intermedia {
+    border-left: 8px solid #f1c40f;
+    background: #fff9e6;
+}
+
+/* NO IMPORTANTE */
+.tarea.Noimportante {
+    border-left: 8px solid #2ecc71;
+    background: #eafaf1;
+}

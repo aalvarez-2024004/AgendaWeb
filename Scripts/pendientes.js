@@ -8,38 +8,52 @@ let listaPendientes = document.getElementById('lista-pendientes');
 // Array de tareas
 let tareas = [];
 
+const prioridadOrden = {
+    "Importante": 1,
+    "Intermedia": 2,
+    "Noimportante": 3
+};
+
+
 // Función para mostrar todas las tareas
 function mostrarTareas() {
     listaPendientes.innerHTML = '';
+
+    // ORDENAR POR PRIORIDAD
+    tareas.sort((a, b) => {
+        return prioridadOrden[a.categoria] - prioridadOrden[b.categoria];
+    });
 
     for (let i = 0; i < tareas.length; i++) {
         let tarea = tareas[i];
 
         let tarjeta = document.createElement('div');
-        tarjeta.className = 'tarea ' + tarea.categoria.replace(' ', ''); // clase simple
+        tarjeta.className = `tarea ${tarea.categoria}`;
         tarjeta.innerHTML = `
             <h3>${tarea.nombre}</h3>
             <p>${tarea.descripcion}</p>
+            <small>Prioridad: ${tarea.categoria}</small>
             <div class="acciones">
                 <button class="editar">Editar</button>
                 <button class="eliminar">Eliminar</button>
             </div>
         `;
 
-        // Botón eliminar
-        tarjeta.querySelector('.eliminar').addEventListener('click', function() {
+        // ELIMINAR
+        tarjeta.querySelector('.eliminar').onclick = function () {
             tareas.splice(i, 1);
             mostrarTareas();
-        });
+        };
 
-        // Botón editar
-        tarjeta.querySelector('.editar').addEventListener('click', function() {
+        // EDITAR
+        tarjeta.querySelector('.editar').onclick = function () {
             nombreInput.value = tarea.nombre;
             descInput.value = tarea.descripcion;
             categoriaSelect.value = tarea.categoria;
 
-            // Al presionar agregar mientras se edits, se actualiza la tarea
-            botonAgregar.onclick = function() {
+            botonAgregar.textContent = 'Actualizar';
+
+            botonAgregar.onclick = function () {
                 tarea.nombre = nombreInput.value;
                 tarea.descripcion = descInput.value;
                 tarea.categoria = categoriaSelect.value;
@@ -53,9 +67,7 @@ function mostrarTareas() {
 
                 mostrarTareas();
             };
-
-            botonAgregar.textContent = 'Actualizar';
-        });
+        };
 
         listaPendientes.appendChild(tarjeta);
     }
